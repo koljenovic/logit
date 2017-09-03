@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ba.unsa.etf.logit.AttendanceActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/top_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:subtitleTextColor="?android:attr/textColorSecondaryNoDisable"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:titleTextColor="?android:attr/textColorPrimaryInverse" />
+
+    <LinearLayout
+        android:id="@+id/lin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_toolbar"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/horo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="16dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/geoButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onGeoButton"
+                android:text="Button"
+                app:srcCompat="@drawable/ic_geo" />
+
+            <ImageButton
+                android:id="@+id/validateButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onValidateButton"
+                android:text="Button"
+                app:srcCompat="@drawable/ic_security" />
+
+            <ImageButton
+                android:id="@+id/syncButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onSyncButton"
+                android:text="Button"
+                app:srcCompat="@drawable/ic_sync" />
+
+            <ImageButton
+                android:id="@+id/bugButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onBugButton"
+                android:text="Button"
+                app:srcCompat="@drawable/ic_bug" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/geoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_light"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/validate_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-8dp"
+            android:layout_marginTop="-8dp"
+            android:indeterminate="true"
+            android:padding="0dp"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/prisutni"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>
