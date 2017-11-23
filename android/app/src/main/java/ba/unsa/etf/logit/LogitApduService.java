@@ -185,7 +185,7 @@ public class LogitApduService extends HostApduService {
             return RET_COMPLETE;
         }
 
-        int offset = ((commandApdu[APDU_P1]) << 8) | commandApdu[APDU_P2];
+        int offset = ((commandApdu[APDU_P1] & 0xff) << 8) | (commandApdu[APDU_P2] & 0xff);
         Log.d(TAG, "offset: " + Integer.toString(offset));
         int Le = commandApdu[APDU_READ_LE] & 0xff;
         byte [] retData = new byte[Le + RET_COMPLETE.length];
