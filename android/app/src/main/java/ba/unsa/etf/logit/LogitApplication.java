@@ -4,7 +4,7 @@ import android.app.Application;
 
 public class LogitApplication extends Application {
     private byte[] message;
-    public static final String SERVICE_URL = "http://192.168.1.13:5000";
+    public static final String SERVICE_URL = "https://logit.mine.nu:5000";
 
     public static String toHext(byte [] data) {
         StringBuilder buf = new StringBuilder();

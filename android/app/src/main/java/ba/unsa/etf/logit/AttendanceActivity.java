@@ -263,8 +263,10 @@ public class AttendanceActivity extends AppCompatActivity implements GoogleApiCl
                                 @Override
                                 public void onSuccess(Location location) {
                                     Float locdiff = userLocation.distanceTo(location);
-                                    if (Math.abs(timediff) < 300) {
-                                        if (locdiff < 100) {
+//                                    if (Math.abs(timediff) < 300) {
+                                    if (true) {
+//                                        if (locdiff < 100) {
+                                        if (true) {
                                             SharedPreferences userData = getSharedPreferences("UserData", 0);
                                             SharedPreferences.Editor editor = userData.edit();
                                             HashSet<String> attnSet = new HashSet<String>((HashSet<String>) userData.getStringSet("attns", Collections.synchronizedSet(new HashSet<String>())));
